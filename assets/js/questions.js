@@ -23,3 +23,27 @@ var questions = [
     choices:["commas","curly brakets","quaotes","parenthesis"],
     answer:"curly brakets"},
 ];
+
+// Update question, generate a new question, store questions' index
+function updateQuestion (){
+chosenQuestion = questions[(Math.floor(math.random()*questions.length))];
+answer = chosenQuestion.answer;
+correctAnswerIndex = chosenQuestion.choices.indexOf(answer);
+document.getElementById('question').textContent = chosenQuestion.question;
+document.querySelector('label[for=option-1]').textContent = chosenQuestion.choices[0];
+document.querySelector('label[for=option-2]').textContent = chosenQuestion.choices[1];
+document.querySelector('label[for=option-3]').textContent = chosenQuestion.choices[2];
+document.querySelector('label[for=option-4]').textContent = chosenQuestion.choices[3];
+}
+
+//Correct answer, incorrect answer message
+function correctAnswerCheck (){
+    if (providedAnswerIndex == correctAnswerIndex) {
+        feedback.textContent = 'Your answer is correct!!';
+        deducedPoints = false;
+    }
+    else {
+        feedback.textContent = 'Your answer is incorrect. You have deducted ' + deductedTime + ' seconds from the timer.';
+        deductPoints = true;
+    }
+}
