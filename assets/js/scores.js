@@ -39,3 +39,34 @@ if (userInfo.score <=0) {
 }
 return userInfo.score;
 }
+
+// Store & display user's scoring
+function saveScore () {
+    if (!userScores) {
+        userScores = [];
+    }
+    userScores.push(userInfo);
+    localStorage.setItem("userScores",JSON.stringify(userScores));
+}
+function displayScores () {
+    title.textContent = "Recent Scores";
+    viewScore.style.display = "none";
+    form.style.display = "none";
+    submitScoreButton.style.display = "none";
+    clearScoresButton.style.display = "block";
+
+    if (counter2 == 0){
+        submitScoreButton.style.display = "block";
+    }
+    headerText.textContent = '';
+    for (var i = 0; i < userScores.length; i++) {
+        headerText.textContent += userScores[i].name + " has a score of " + userScores[i].score + ". " +| "; 
+    }
+}
+
+// To clear recent score from localStorage
+function clearScores (){
+    localStorage.clear ();
+    submitScoreButton.style.display = "none"
+    headerText.textContent = 'You have cleared your recent scores.';
+}
