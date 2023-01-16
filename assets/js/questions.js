@@ -20,7 +20,7 @@ var questions = [
     answer:"all of the above"},
 
     {question:"When being assigned to variable, string values must be enclosed within:",
-    choices:["commas","curly brakets","quaotes","parenthesis"],
+    choices:["commas","curly brakets","quotes","parenthesis"],
     answer:"curly brakets"},
 ];
 

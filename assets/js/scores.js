@@ -70,3 +70,26 @@ function clearScores (){
     submitScoreButton.style.display = "none"
     headerText.textContent = 'You have cleared your recent scores.';
 }
+
+// Submit & clear score buttons
+form.style.display = "none";
+submitScoreButton.style.display = "none";
+clearScoresButton.style.display = "none";
+
+// Show the current score
+viewScores.addEventListener ('click', function() {
+    if (JSON.parse(localStorage.getItem("userScores"))) {
+        counter2++;
+        displayScores();
+    }
+    else {
+        window.alert("There are no new scores.")
+    }
+});
+
+
+// don't forget
+// var audio = new Audio('audio_file.mp3');
+// audio.play();
+// var correct = new Audio("correctANSWER.mp3");
+// var wrong = new Audio("wrongANSWER.mp3");  
