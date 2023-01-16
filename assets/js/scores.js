@@ -87,7 +87,7 @@ viewScores.addEventListener ('click', function() {
     }
 });
 
-// Setting sound
+// Setting sound usuing https://docs.idew.org/code-trivia-app/advanced/code-mod-examples/sound-add-sound-effects-on-answer-clicks
 var soundCorrect = new Audio("sounds/sound_correct.mp3");
 var soundIncorrect = new Audio("sounds/sound_incorrect.mp3");
 if (isCorrect) {
