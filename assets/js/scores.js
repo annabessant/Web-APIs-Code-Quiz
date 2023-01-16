@@ -87,9 +87,14 @@ viewScores.addEventListener ('click', function() {
     }
 });
 
-
-// don't forget
-// var audio = new Audio('audio_file.mp3');
-// audio.play();
-// var correct = new Audio("correctANSWER.mp3");
-// var wrong = new Audio("wrongANSWER.mp3");  
+// Setting sound
+var soundCorrect = new Audio("sounds/sound_correct.mp3");
+var soundIncorrect = new Audio("sounds/sound_incorrect.mp3");
+if (isCorrect) {
+    $("#feedback").html(`Way to go!`).show();
+    soundCorrect.play();
+  }
+  else {
+    $("#feedback").html(`Better luck next time.`).show();
+    soundIncorrect.play();
+  }
