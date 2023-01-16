@@ -69,4 +69,18 @@ resetButton.addEventListener('click', function(){
     location.reload();
 });
 
+// Submit & clear user's score
+submitScoreButton.addEventListener('click', function(){
+    counter2++;
+    saveScore();
+    displayScores();
+    viewScores.style.display = "none";
+    timerDisplay.style.display = "none";
+    feedback.style.display = "none";
+    clearScoresButton.style.display = "block";
+});
+
+clearScoresButton.addEventListener('click', function(){
+    clearScores();
+});
 
