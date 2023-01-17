@@ -7,6 +7,8 @@ var feedback = document.getElementById('feedback');
 var timerDisplay = document.getElementById('timer');
 var timerEl = document.getElementById('time');
 var questionCount = 0; 
+var endDiv = document.getElementById('end-screen');
+var finalScore = document.getElementById('final-score');
 // var resetButton = document.getElementById('reset');
 var submitScoreButton = document.getElementById('submit');
 // var clearScoresButton = document.getElementById('clear-scores');
@@ -42,7 +44,7 @@ function timerFunc(){
     timeRemaining--;
     timerEl.textContent = timeRemaining;
     if (timeRemaining <=0){
-        //tbc
+        endQuiz();
     }
 }
 
@@ -67,10 +69,17 @@ if (btn.textContent !== chosenQuestion.answer){
 }
 questionCount++;
 if (timeRemaining <=0 || questionCount===questions.length){
-    //tbc
+    endQuiz();
 } else {
     updateQuestion ();
 }
+}
+
+function endQuiz (){
+    clearInterval(timerId);
+endDiv.removeAttribute('class');
+finalScore.textContent=timeRemaining;
+questionDiv.setAttribute('class', "hide");
 }
 //Collect data from the form
 // form.addEventListener('submit', function(event){
