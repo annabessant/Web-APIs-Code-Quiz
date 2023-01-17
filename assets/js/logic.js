@@ -19,8 +19,8 @@ startButton.addEventListener('click', function() {
     title.textContent = "JavaScript Codimng Quiz";
     // headerText.textContent = "Welcome to our time Quiz! Your score is linked to the time left on the timer. You have 6 questions to answer within 60 seconds. For each incorrect answer you loose 10 seconds. BEST of LUCK!"
     updateQuestion();
-    viewScores.style.display = "block";
-    timerDisplay.style.display = "block";
+    // viewScores.style.display = "block";
+    // timerDisplay.style.display = "block";
     startButton.style.display = "none";
     form.style.display = "block";
     userInfo.score = startTimer(time, timerDisplay);
