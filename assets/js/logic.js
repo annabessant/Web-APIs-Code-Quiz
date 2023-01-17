@@ -6,6 +6,7 @@ var questionDiv = document.getElementById('questions');
 var feedback = document.getElementById('feedback');
 var timerDisplay = document.getElementById('timer');
 var timerEl = document.getElementById('time');
+var questionCount = 0; 
 // var resetButton = document.getElementById('reset');
 var submitScoreButton = document.getElementById('submit');
 // var clearScoresButton = document.getElementById('clear-scores');
@@ -44,43 +45,70 @@ function timerFunc(){
         //tbc
     }
 }
+
+form.onclick=choiceHandler;
+
+
+function choiceHandler (event){
+var btn=event.target;
+
+if (! btn.matches (".choice")){
+    return;
+}
+if (btn.textContent !== chosenQuestion.answer){
+    timeRemaining-=15;
+    if (timeRemaining <0){
+        timeRemaining=0
+    }
+    timerEl.textContent=timeRemaining;
+    alert("wrongAnswer. press OK to continue");
+} else{
+    alert("correctAnswer. press OK to continue");
+}
+questionCount++;
+if (timeRemaining <=0 || questionCount===questions.length){
+    //tbc
+} else {
+    updateQuestion ();
+}
+}
 //Collect data from the form
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-    // DOM elements
-    var firstOption = document.getElementById("option-1");
-    var secondOption = document.getElementById("option-2");
-    var thirdOption = document.getElementById("option-3");
-    var forthOption = document.getElementById("option-4");
+// form.addEventListener('submit', function(event){
+//     event.preventDefault();
+//     // DOM elements
+//     var firstOption = document.getElementById("option-1");
+//     var secondOption = document.getElementById("option-2");
+//     var thirdOption = document.getElementById("option-3");
+//     var forthOption = document.getElementById("option-4");
 
-    // For each option chosen as the correct answer
-    if (firstOption.checked){
-        providedAnswerIndex = firstOption.value;
-        correctAnswerCheck();
-        firstOption.checked = false;
-    }
-    if (secondOption.checked){
-        providedAnswerIndex = secondOption.value;
-        correctAnswerCheck();
-        secondOption.checked = false;
-    }
-    if (thirdOption.checked){
-        providedAnswerIndex = thirdOption.value;
-        correctAnswerCheck();
-        thirdOption.checked = false;
-    }
-    if (forthOption.checked){
-        providedAnswerIndex = forthOption.value;
-        correctAnswerCheck();
-        forthOption.checked = false;
-    }
+//     // For each option chosen as the correct answer
+//     if (firstOption.checked){
+//         providedAnswerIndex = firstOption.value;
+//         correctAnswerCheck();
+//         firstOption.checked = false;
+//     }
+//     if (secondOption.checked){
+//         providedAnswerIndex = secondOption.value;
+//         correctAnswerCheck();
+//         secondOption.checked = false;
+//     }
+//     if (thirdOption.checked){
+//         providedAnswerIndex = thirdOption.value;
+//         correctAnswerCheck();
+//         thirdOption.checked = false;
+//     }
+//     if (forthOption.checked){
+//         providedAnswerIndex = forthOption.value;
+//         correctAnswerCheck();
+//         forthOption.checked = false;
+//     }
 
-    counter ++;
+//     counter ++;
 
-    if (counter < numberOfQuestions){
-        updateQuestion();
-    }
-});
+//     if (counter < numberOfQuestions){
+//         updateQuestion();
+//     }
+// });
 
 // Restart the Quiz via reloading the page
 // resetButton.addEventListener('click', function(){
