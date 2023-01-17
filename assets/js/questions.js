@@ -30,10 +30,10 @@ chosenQuestion = questions[(Math.floor(Math.random()*questions.length))];
 answer = chosenQuestion.answer;
 correctAnswerIndex = chosenQuestion.choices.indexOf(answer);
 document.getElementById('question-title').textContent = chosenQuestion.question;
-document.querySelector('label[for=option-1]').textContent = chosenQuestion.choices[0];
-document.querySelector('label[for=option-2]').textContent = chosenQuestion.choices[1];
-document.querySelector('label[for=option-3]').textContent = chosenQuestion.choices[2];
-document.querySelector('label[for=option-4]').textContent = chosenQuestion.choices[3];
+document.querySelector('#option-1').textContent = chosenQuestion.choices[0];
+document.querySelector('#option-2').textContent = chosenQuestion.choices[1];
+document.querySelector('#option-3').textContent = chosenQuestion.choices[2];
+document.querySelector('#option-4').textContent = chosenQuestion.choices[3];
 }
 
 //Correct answer, incorrect answer message
