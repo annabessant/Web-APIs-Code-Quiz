@@ -29,7 +29,7 @@ function updateQuestion() {
 chosenQuestion = questions[(Math.floor(Math.random()*questions.length))];
 answer = chosenQuestion.answer;
 correctAnswerIndex = chosenQuestion.choices.indexOf(answer);
-document.getElementById('question').textContent = chosenQuestion.question;
+document.getElementById('question-title').textContent = chosenQuestion.question;
 document.querySelector('label[for=option-1]').textContent = chosenQuestion.choices[0];
 document.querySelector('label[for=option-2]').textContent = chosenQuestion.choices[1];
 document.querySelector('label[for=option-3]').textContent = chosenQuestion.choices[2];
