@@ -18,7 +18,7 @@ var counter2 = 0;
 
 function startTimer(duration, display) {
     var time = duration, minutes, seconds;
-    var countdown = setInterval(function () {
+    var countdown = setInterval(function () 
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -35,13 +35,12 @@ function startTimer(duration, display) {
         feedback.textContent = "Time is up! Your final score is: " + timer;
         submitScoreButton.style.display = "block";
     }
-}, 1000);
+    }, 1000);
 
-if (userInfo.score <=0) {
+    if (userInfo.score <=0) {
     userInfo.score = 0;
-}
-return userInfo.score;
-}
+    }
+    return userInfo.score;
 
 // Store & display user's scoring
 function saveScore () {

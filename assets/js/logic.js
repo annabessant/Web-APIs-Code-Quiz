@@ -1,17 +1,17 @@
 //Get title, form, start-quiz, feedback, timer, reset, submit-score, clear-score, header-text, view-score elements:
 var title = document.getElementById('title');
-var form = document.getElementById('form');
-var startButton = document.getElementById('start-quiz');
+var form = document.getElementById('choices');
+var startButton = document.getElementById('start');
 var feedback = document.getElementById('feedback');
 var timerDisplay = document.getElementById('timer');
-var resetButton = document.getElementById('reset');
-var submitScoreButton = document.getElementById('submit-score');
-var clearScoresButton = document.getElementById('clear-scores');
+// var resetButton = document.getElementById('reset');
+var submitScoreButton = document.getElementById('submit');
+// var clearScoresButton = document.getElementById('clear-scores');
 var headerText = document.getElementById("header-text");
 var viewScores = document.getElementById("view-scores");
-
-// Give the user the ability to save their initials and their score
-userInfo.name = window.promt ("Please leave your name", "Peppa Pig");
+// var userInfo;
+// // Give the user the ability to save their initials and their score
+// userInfo.name = window.prompt("Please leave your name", "Peppa Pig");
 
 // Add event listeners: display the form, start timer, collect data from the form
 startButton.addEventListener('click', function() {
@@ -65,9 +65,9 @@ form.addEventListener('submit', function(event){
 });
 
 // Restart the Quiz via reloading the page
-resetButton.addEventListener('click', function(){
-    location.reload();
-});
+// resetButton.addEventListener('click', function(){
+//     location.reload();
+// });
 
 // Submit & clear user's score
 submitScoreButton.addEventListener('click', function(){
@@ -80,7 +80,7 @@ submitScoreButton.addEventListener('click', function(){
     clearScoresButton.style.display = "block";
 });
 
-clearScoresButton.addEventListener('click', function(){
-    clearScores();
-});
+// clearScoresButton.addEventListener('click', function(){
+//     clearScores();
+// });
 

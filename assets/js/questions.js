@@ -7,7 +7,7 @@ var questions = [
     choices: ["<javascript>","<script>","<js>","<scripfile>"],
     answer:"<script>"},
 
-    {question:"How to create "Hello World" alert box?",
+    {question:"How to create 'Hello World' alert box?",
     choices:["alert('Hello World')","msgBox('Hello World')","msg('Hello World')","alertBox('Hello World')"],
     answer: "alert('Hello World')"},
 
