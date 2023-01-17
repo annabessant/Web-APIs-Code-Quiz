@@ -17,7 +17,7 @@ var viewScores = document.getElementById("view-scores");
 startButton.addEventListener('click', function() {
     counter2 = 0;
     title.textContent = "JavaScript Codimng Quiz";
-    headerText.textContent = "Welcome to our time Quiz! Your score is linked to the time left on the timer. You have 6 questions to answer within 60 seconds. For each incorrect answer you loose 10 seconds. BEST of LUCK!"
+    // headerText.textContent = "Welcome to our time Quiz! Your score is linked to the time left on the timer. You have 6 questions to answer within 60 seconds. For each incorrect answer you loose 10 seconds. BEST of LUCK!"
     updateQuestion();
     viewScores.style.display = "block";
     timerDisplay.style.display = "block";
