@@ -1,5 +1,5 @@
 //Get title, form, start-quiz, feedback, timer, reset, submit-score, clear-score, header-text, view-score elements:
-var title = document.getElementById('title');
+var title = document.getElementById('question-title');
 var form = document.getElementById('choices');
 var startButton = document.getElementById('start');
 var feedback = document.getElementById('feedback');
