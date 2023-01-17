@@ -26,7 +26,7 @@ var questions = [
 
 // Update question, generate a new question, store questions' index
 function updateQuestion() {
-chosenQuestion = questions[(Math.floor(math.random()*questions.length))];
+chosenQuestion = questions[(Math.floor(Math.random()*questions.length))];
 answer = chosenQuestion.answer;
 correctAnswerIndex = chosenQuestion.choices.indexOf(answer);
 document.getElementById('question').textContent = chosenQuestion.question;
