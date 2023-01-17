@@ -6,8 +6,11 @@ To take a code quiz, a user is clicking on start button. It starts the timer and
 
 ## Links
 Repo URL: https://github.com/annabessant/Web-APIs-Code-Quiz 
+
 Website URL: https://annabessant.github.io/Web-APIs-Code-Quiz/ 
 
 ## Screenshot
 ! [alt text: screetshot of the quiz start page](./assets/Screenshot_Start_Quiz.jpeg)
 
+## Contact
+For further details and follow-up: anna@thefutureofinnovation.org 
