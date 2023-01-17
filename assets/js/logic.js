@@ -6,15 +6,15 @@ var feedback = document.getElementById('feedback');
 var timerDisplay = document.getElementById('timer');
 var resetButton = document.getElementById('reset');
 var submitScoreButton = document.getElementById('submit-score');
-var clearScoreButton = document.getElementById('clear-score');
+var clearScoresButton = document.getElementById('clear-scores');
 var headerText = document.getElementById("header-text");
-var viewScore = document.getElementById("view-score");
+var viewScores = document.getElementById("view-scores");
 
 // Give the user the ability to save their initials and their score
 userInfo.name = window.promt ("Please leave your name", "Peppa Pig");
 
 // Add event listeners: display the form, start timer, collect data from the form
-startButton.addEventListener('click', function(){
+startButton.addEventListener('click', function() {
     counter2 = 0;
     title.textContent = "JavaScript Codimng Quiz";
     headerText.textContent = "Welcome to our time Quiz! Your score is linked to the time left on the timer. You have 6 questions to answer within 60 seconds. For each incorrect answer you loose 10 seconds. BEST of LUCK!"
@@ -37,22 +37,22 @@ form.addEventListener('submit', function(event){
 
     // For each option chosen as the correct answer
     if (firstOption.checked){
-        providedAnswerIndex = firstOption.ariaValueMax;
+        providedAnswerIndex = firstOption.value;
         correctAnswerCheck();
         firstOption.checked = false;
     }
     if (secondOption.checked){
-        providedAnswerIndex = secondOption.ariaValueMax;
+        providedAnswerIndex = secondOption.value;
         correctAnswerCheck();
         secondOption.checked = false;
     }
     if (thirdOption.checked){
-        providedAnswerIndex = thirdOption.ariaValueMax;
+        providedAnswerIndex = thirdOption.value;
         correctAnswerCheck();
         thirdOption.checked = false;
     }
     if (forthOption.checked){
-        providedAnswerIndex = forthOption.ariaValueMax;
+        providedAnswerIndex = forthOption.value;
         correctAnswerCheck();
         forthOption.checked = false;
     }

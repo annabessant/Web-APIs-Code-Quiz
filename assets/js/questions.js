@@ -25,7 +25,7 @@ var questions = [
 ];
 
 // Update question, generate a new question, store questions' index
-function updateQuestion (){
+function updateQuestion() {
 chosenQuestion = questions[(Math.floor(math.random()*questions.length))];
 answer = chosenQuestion.answer;
 correctAnswerIndex = chosenQuestion.choices.indexOf(answer);
@@ -37,10 +37,10 @@ document.querySelector('label[for=option-4]').textContent = chosenQuestion.choic
 }
 
 //Correct answer, incorrect answer message
-function correctAnswerCheck (){
+function correctAnswerCheck() {
     if (providedAnswerIndex == correctAnswerIndex) {
         feedback.textContent = 'Your answer is correct!!';
-        deducedPoints = false;
+        deductPoints = false;
     }
     else {
         feedback.textContent = 'Your answer is incorrect. You have deducted ' + deductedTime + ' seconds from the timer.';
