@@ -135,7 +135,15 @@ submitScoreButton.addEventListener('click', function(){
     clearScoresButton.style.display = "block";
 });
 
-// clearScoresButton.addEventListener('click', function(){
-//     clearScores();
-// });
+clearScoresButton.addEventListener('click', function(){
+    clearScores();
+});
+
+function saveScore () {
+    if (!userScores) {
+        userScores = [];
+    }
+    userScores.push(userInfo);
+    localStorage.setItem("userScores",JSON.stringify(userScores));
+}
 
